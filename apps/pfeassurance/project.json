@@ -1,0 +1,75 @@
+{
+  "name": "pfeassurance",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "pfeassurance",
+  "sourceRoot": "apps/pfeassurance/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/pfeassurance",
+        "index": "apps/pfeassurance/src/index.html",
+        "browser": "apps/pfeassurance/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/pfeassurance/tsconfig.app.json",
+        "assets": [
+          "apps/pfeassurance/src/favicon.ico",
+          "apps/pfeassurance/src/assets"
+        ],
+        "styles": ["apps/pfeassurance/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "pfeassurance:build:production"
+        },
+        "development": {
+          "buildTarget": "pfeassurance:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "pfeassurance:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "pfeassurance:build",
+        "staticFilePath": "dist/apps/pfeassurance/browser"
+      }
+    }
+  }
+}
