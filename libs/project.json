@@ -1,0 +1,9 @@
+{
+  "name": "tableaux",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/src",
+  "prefix": "pfeassurance",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

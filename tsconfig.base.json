@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pfeassurance/forms": ["libs/forms/src/index.ts"],
+      "@pfeassurance/inputs": ["inputs/src/index.ts"],
+      "@pfeassurance/tab": ["lib/src/index.ts"],
+      "@pfeassurance/tableau": ["tableau/src/index.ts"],
+      "@pfeassurance/tableaux": ["libs/src/index.ts"],
+      "@pfeassurance/tabs": ["libs/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

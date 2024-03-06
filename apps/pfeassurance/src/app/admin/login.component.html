@@ -1,0 +1,19 @@
+<div class="container">
+    <div>
+        <app-forms [Nom]="email" [Propriete]="utilisateur.get('email')"></app-forms>
+        <app-forms [Nom]="motDePasse" [Propriete]="utilisateur.get('motDePasse')"></app-forms>
+
+        
+        <button pButton pRipple label="Submit" class="p-button-success" (click)="login()"></button>
+
+      </div>
+
+      <div class="div">
+        <p>Forget Password?</p>
+      </div>
+
+      <div class="div">
+        <p>Don't have an Acount? <a class="a"  routerLink="/signup">Sign Up </a></p>
+        
+      </div>
+</div>

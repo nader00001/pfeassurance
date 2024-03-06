@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        <app-forms [Nom]="nom" [Propriete]="utilisateur.get('Nom')" placeholder="Nom"></app-forms>
+        <app-forms [Nom]="prenom" [Propriete]="utilisateur.get('Prenom')" placeholder="Prenom"></app-forms>
+        <app-forms [Nom]="adresse" [Propriete]="utilisateur.get('Adresse')" placeholder="Adresse"></app-forms>
+        <app-forms [Nom]="telephone" [Propriete]="utilisateur.get('Telephone')" placeholder="Telephone"></app-forms>
+        <app-forms [Nom]="email" [Propriete]="utilisateur.get('Email')" placeholder="Email"></app-forms>
+        <app-forms [Nom]="motDePasse" [Propriete]="utilisateur.get('MotDePasse')" placeholder="MotDePasse"></app-forms>
+        <button pButton pRipple label="Submit" class="p-button-success" (click)="signUp()"></button>
+        <div>
+            <span>
+                retour pour <a href="/login">login</a>
+            </span>
+        </div>
+      </div>
+</div>
